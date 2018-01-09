@@ -6,7 +6,8 @@ var router=new VueRouter({
                     left:Left,
                     right:Right,
                 }}
-            ]}
+            ]},
+        {path:'/quick',component:Quick}
     ]
 })
 var router=new Vue({

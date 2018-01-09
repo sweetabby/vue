@@ -12,9 +12,53 @@
     <script src="tween.js"></script>
     <link rel="stylesheet" href="makdown.css">
 </head>
+<style>
+    .a-enter{
+        opacity: 0;
+    }
+    .a-enter-active{
+        transition:  opacity 1s;
+    }
+    .a-enter-to{
+        opacity: 1;
+    }
+    .a-leave{
+        opacity: 1;
+    }
+    .a-leave-active{
+        transition:  opacity 1s;
+    }
+    .a-leave-to{
+        opacity: 0;
+    }
+    .v-enter{
+        transform: translate(100%,0)
+    }
+    .v-enter-active{
+        transition:  transform 1s;
+    }
+    .v-enter-to{
+        transform: translate(0,0)
+    }
+    .v-leave{
+        transform: translate(0,0)
+    }
+    .v-leave-active{
+        transition:  transform 1s;
+    }
+    .v-leave-to{
+        transform: translate(-100%,0)
+    }
+</style>
 <body>
 <div id="root">
-    <router-view></router-view>
+    <nav>
+        <router-link to="/">文档</router-link>
+        <router-link to="/quick">快速上手</router-link>
+    </nav>
+    <transition name="a" mode="out-in">
+        <router-view></router-view>
+    </transition>
 </div>
 <script src="components.js"></script>
 <script src="app.js"></script>

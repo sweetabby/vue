@@ -1,7 +1,6 @@
 var Main=Vue.component('Main',{
     template:`
              <div class="template">
-                  <nav>导航</nav>
                   <div class="body">
                       <div class="left">
                           <router-view class='leftaside' name="left"></router-view>
@@ -103,7 +102,7 @@ var Right=Vue.component('Right',{
 })
 var Quick=Vue.component('Quick',{
     template:`
-     <div style="padding-top: 40px;">
+     <div style="padding-top: 60px;">
        quickquickquickquickquickquick
      </div>
     `
